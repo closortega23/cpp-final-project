@@ -11,7 +11,6 @@ struct Student {
     int numGrades;
 };
 
-// Function declarations
 void introScreen();
 void displayMenu();
 void addStudent(Student students[], int &count);
@@ -27,4 +26,19 @@ void introScreen() {
     cout << "===========================\n";
     cout << "📘 Student GPA Calculator 📘\n";
     cout << "===========================\n\n";
+}
+
+void displayMenu() {
+    cout << "\nMenu:\n";
+    cout << "1. Add Student\n";
+    cout << "2. View Students\n";
+    cout << "3. Delete Student\n";
+    cout << "4. Save to File\n";
+    cout << "5. Load from File\n";
+    cout << "6. Exit\n";
+    cout << "Enter your choice: ";
+}
+
+bool isValidGrade(float g) {
+    return g >= 0 && g <= 100;
 }
