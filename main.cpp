@@ -74,6 +74,7 @@ void addStudent(Student students[], int &count) {
     students[count++] = s;
     cout << "Student added successfully.\n";
 }
+
 void viewStudents(const Student students[], int count) {
     cout << "\n--- Student Records ---\n";
     for (int i = 0; i < count; ++i) {
