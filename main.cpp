@@ -1,3 +1,7 @@
+//Author.....: Carlos Ortega
+//Assignment.: Final Project
+
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
