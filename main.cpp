@@ -150,3 +150,46 @@ void loadFromFile(Student students[], int &count) {
     file.close();
     cout << "Data loaded from file.\n";
 }
+
+int main() {
+    Student students[100];
+    int count = 0;
+    int choice;
+
+    introScreen();
+    loadFromFile(students, count);
+
+    while (true) {
+        displayMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addStudent(students, count);
+                break;
+            case 2:
+                viewStudents(students, count);
+                break;
+            case 3: {
+                int id;
+                cout << "Enter student ID to delete: ";
+                cin >> id;
+                deleteStudent(students, count, id);
+                break;
+            }
+            case 4:
+                saveToFile(students, count);
+                break;
+            case 5:
+                loadFromFile(students, count);
+                break;
+            case 6:
+                cout << "Goodbye!\n";
+                return 0;
+            default:
+                cout << "Invalid choice. Try again.\n";
+        }
+    }
+
+    return 0;
+}
